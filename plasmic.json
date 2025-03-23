@@ -1,0 +1,84 @@
+{
+  "platform": "nextjs",
+  "code": {
+    "lang": "ts",
+    "scheme": "blackbox",
+    "reactRuntime": "classic"
+  },
+  "style": {
+    "scheme": "css-modules",
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+  },
+  "images": {
+    "scheme": "public-files",
+    "publicDir": "../public",
+    "publicUrlPrefix": "/"
+  },
+  "tokens": {
+    "scheme": "theo",
+    "tokensFilePath": "plasmic-tokens.theo.json"
+  },
+  "srcDir": "components",
+  "defaultPlasmicDir": "./plasmic",
+  "projects": [
+    {
+      "projectId": "cSUR3G93M7rWiFoDxYU97s",
+      "projectApiToken": "uR0Ix6hvULHC4dz28OqhuYNUYkdn8ZqklnpanLmVFZ8DHu9yN2H9XVEg9GSterTxwW5zIhG82hmjGFDWqsrA",
+      "projectName": "E-Commerce",
+      "version": "latest",
+      "cssFilePath": "plasmic/e_commerce/plasmic.module.css",
+      "components": [
+        {
+          "id": "-2dAKJNOAOMO",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "cSUR3G93M7rWiFoDxYU97s",
+          "renderModuleFilePath": "plasmic/e_commerce/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/e_commerce/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/"
+        }
+      ],
+      "icons": [],
+      "images": [],
+      "indirect": false,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "codeComponents": [
+        {
+          "id": "8Rt4-oPJM-hN",
+          "name": "PlasmicHead",
+          "displayName": "hostless-plasmic-head",
+          "componentImportPath": "@plasmicapp/react-web"
+        },
+        {
+          "id": "PlrUh8bYVqwk",
+          "name": "Fetcher",
+          "displayName": "plasmic-data-source-fetcher",
+          "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ],
+      "customFunctions": []
+    }
+  ],
+  "globalVariants": {
+    "variantGroups": [
+      {
+        "id": "MTzqulV_YI5a",
+        "name": "Screen",
+        "projectId": "cSUR3G93M7rWiFoDxYU97s",
+        "contextFilePath": "plasmic/e_commerce/PlasmicGlobalVariant__Screen.tsx"
+      }
+    ]
+  },
+  "wrapPagesWithGlobalContexts": true,
+  "nextjsConfig": {
+    "pagesDir": "../pages"
+  },
+  "cliVersion": "0.1.336",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.336/dist/plasmic.schema.json"
+}
