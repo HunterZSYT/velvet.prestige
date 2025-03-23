@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { PlasmicCanvasHost, registerComponent } from '@plasmicapp/react-web/lib/host';
+import { Button } from '@mui/material'; // Import the Button component from Material-UI
 
 // You can register any code components that you want to use here; see
 // https://docs.plasmic.app/learn/code-components-ref/
@@ -8,7 +9,6 @@ import { PlasmicCanvasHost, registerComponent } from '@plasmicapp/react-web/lib/
 // http://localhost:3000/plasmic-host).  See
 // https://docs.plasmic.app/learn/app-hosting/#set-a-plasmic-project-to-use-your-app-host
 
-// registerComponent(...)
 registerComponent(Button, {
   name: "MuiButton",
   props: {
@@ -36,6 +36,7 @@ registerComponent(Button, {
     },
   },
 });
+
 export default function PlasmicHost() {
   return <PlasmicCanvasHost />;
 }
