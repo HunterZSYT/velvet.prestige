@@ -9,7 +9,33 @@ import { PlasmicCanvasHost, registerComponent } from '@plasmicapp/react-web/lib/
 // https://docs.plasmic.app/learn/app-hosting/#set-a-plasmic-project-to-use-your-app-host
 
 // registerComponent(...)
-
+registerComponent(Button, {
+  name: "MuiButton",
+  props: {
+    variant: {
+      type: "choice",
+      options: ["text", "outlined", "contained"],
+      defaultValue: "text",
+    },
+    color: {
+      type: "choice",
+      options: ["default", "inherit", "primary", "secondary", "success", "error", "info", "warning"],
+      defaultValue: "primary",
+    },
+    size: {
+      type: "choice",
+      options: ["small", "medium", "large"],
+      defaultValue: "medium",
+    },
+    onClick: {
+      type: "eventHandler",
+    },
+    children: {
+      type: "slot",
+      defaultValue: "Click Me",
+    },
+  },
+});
 export default function PlasmicHost() {
   return <PlasmicCanvasHost />;
 }
