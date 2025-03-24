@@ -5,6 +5,7 @@ import { Button } from "@mui/material"; // Importing Material-UI Button
 // Register the Material-UI Button component with Plasmic
 registerComponent(Button, {
   name: "MuiButton",
+  importPath: "@mui/material", // ✅ FIXED: Added importPath
   props: {
     variant: {
       type: "choice",
@@ -23,7 +24,7 @@ registerComponent(Button, {
     },
     onClick: {
       type: "eventHandler",
-      argTypes: [], // ✅ FIXED: Added argTypes to prevent TypeScript error
+      argTypes: [],
     },
     children: {
       type: "slot",
