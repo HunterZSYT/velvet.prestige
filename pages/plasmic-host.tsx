@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { PlasmicCanvasHost, registerComponent } from '@plasmicapp/react-web/lib/host';
-import { Button } from '@mui/material'; // Example: Importing a Material-UI Button
+import * as React from "react";
+import { PlasmicCanvasHost, registerComponent } from "@plasmicapp/react-web/lib/host";
+import { Button } from "@mui/material"; // Importing Material-UI Button
 
-// Register the Material-UI Button component
+// Register the Material-UI Button component with Plasmic
 registerComponent(Button, {
   name: "MuiButton",
   props: {
@@ -23,6 +23,7 @@ registerComponent(Button, {
     },
     onClick: {
       type: "eventHandler",
+      argTypes: [], // ✅ FIXED: Added argTypes to prevent TypeScript error
     },
     children: {
       type: "slot",
